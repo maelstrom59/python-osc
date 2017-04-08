@@ -9,7 +9,7 @@ server = ForkingOSCUDPServer((ip, port), dispatcher)
 server.serve_forever()
 
 or run the server on its own thread:
-server = ForkingOSCUDPServer((ip, port), dispatcher)
+server = ThreadingOSCUDPServer((ip, port), dispatcher)
 server_thread = threading.Thread(target=server.serve_forever)
 server_thread.start()
 ...
